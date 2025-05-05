@@ -2,16 +2,16 @@ package Zadanie3;
 
 public class TestFactory {
     public static void main(String[] args) {
-        BaseFactory baseFactory1 = AbstractFactory.getFactory("FactoryOne");
-        A a1=baseFactory1.createA();
-        System.out.println(a1.aCanDo());
-        B b1=baseFactory1.createB();
-        System.out.println(b1.bCanDo());
+        FurnitureFactory factory1 = FurnitureProvider.getFactory("HomeFactory");
+        Chair chair1 = factory1.createChair();
+        System.out.println(chair1.chairCanDo());
+        Table table1 = factory1.createTable();
+        System.out.println(table1.tableCanDo());
         
-        BaseFactory baseFactory2 = AbstractFactory.getFactory("FactoryTwo");
-        A a2=baseFactory2.createA();
-        System.out.println(a2.aCanDo());
-        B b2=baseFactory2.createB();
-        System.out.println(b2.bCanDo());
+        FurnitureFactory factory2 = FurnitureProvider.getFactory("OfficeFactory");
+        Chair chair2 = factory2.createChair();
+        System.out.println(chair2.chairCanDo());
+        Table table2 = factory2.createTable();
+        System.out.println(table2.tableCanDo());
     }
 } 
